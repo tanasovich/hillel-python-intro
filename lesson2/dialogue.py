@@ -1,0 +1,5 @@
+name: str = input("Hi! My name is Jarvis. What is your name?: ")
+input(f"How are you, {name}?: ")
+first_number: int = int(input("Guess the first number equal or greater than 1: "))
+second_number: int = int(input("Guess the second number: "))
+print(f"Sum of this numbers equal to: {first_number + second_number}")
