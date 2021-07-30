@@ -7,3 +7,4 @@
 ## Optional tasks
 + __sum_number_digits.py__ - read number and find his digits sum
 + __find_prime_numbers_range.py__ - find prime numbers in user defined range
++ __numbers_divisible_by_digits.py__ - read natural number and find numbers which divisible by his own digits
