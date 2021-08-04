@@ -5,9 +5,9 @@ LARGE_BOX_WEIGHT: int = 21
 
 combinations_count: int = 0
 
-for small_boxes in range(0, TOTAL_MASTIC_WEIGHT // SMALL_BOX_WEIGHT + 1):
-    for middle_boxes in range(0, TOTAL_MASTIC_WEIGHT // MIDDLE_BOX_WEIGHT + 1):
-        for large_boxes in range(0, TOTAL_MASTIC_WEIGHT // LARGE_BOX_WEIGHT + 1):
+for small_boxes in range(0, TOTAL_MASTIC_WEIGHT // SMALL_BOX_WEIGHT+1):
+    for middle_boxes in range(0, TOTAL_MASTIC_WEIGHT//MIDDLE_BOX_WEIGHT+1):
+        for large_boxes in range(0, TOTAL_MASTIC_WEIGHT//LARGE_BOX_WEIGHT+1):
             if small_boxes * SMALL_BOX_WEIGHT +\
                     middle_boxes * MIDDLE_BOX_WEIGHT +\
                     large_boxes * LARGE_BOX_WEIGHT == TOTAL_MASTIC_WEIGHT:
