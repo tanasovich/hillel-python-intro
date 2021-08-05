@@ -1,4 +1,10 @@
-number: int = int(input("Input number from 3 to 9: "))
+answer = input("Input number from 3 to 9: ")
+
+if not answer.isdecimal():
+    print("This is not a decimal number!")
+    exit(-1)
+
+number: int = int(answer)
 
 if number < 3 or number > 9:
     print("Number must be from 3 to 9!")
