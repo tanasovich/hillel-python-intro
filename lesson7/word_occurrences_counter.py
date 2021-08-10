@@ -7,6 +7,6 @@ unique_words: set = set(words)
 words_and_occur_numbers: dict = dict()
 
 for word in unique_words:
-    words_and_occur_numbers[word] = one_lined_string.count(word)
+    words_and_occur_numbers[word] = words.count(word)
 
 print(words_and_occur_numbers)
