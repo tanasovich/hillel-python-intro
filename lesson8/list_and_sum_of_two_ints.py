@@ -3,7 +3,7 @@ def is_list_has_sum_of_two(numbers: list[int], sum_of_two: int) -> bool:
         return False
 
     for i in range(len(numbers)):
-        for j in (index for index in range(0, len(numbers)) if index != i):
+        for j in (index for index in range(0, len(numbers)) if index != i):  # loop through list except ith element
             if numbers[i] + numbers[j] == sum_of_two:
                 return True
 
