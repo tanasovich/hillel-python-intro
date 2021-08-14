@@ -12,7 +12,4 @@ def is_list_has_sum_of_two(numbers: list[int], sum_of_two: int) -> bool:
 
 if __name__ == "__main__":
     print(is_list_has_sum_of_two([1, 2, 3, 4, 5], 7))
-    print(is_list_has_sum_of_two([1, 2, 3, 4, 5], 3))
-    print(is_list_has_sum_of_two([1, 2, 3, 4, 5], 9))
     print(is_list_has_sum_of_two([1, 2, 3, 4, 5], 10))
-    print(is_list_has_sum_of_two([], 3))
