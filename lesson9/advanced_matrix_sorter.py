@@ -5,7 +5,7 @@ def sort_matrix(matrix: list) -> None:
     pass
 
 
-def print_matrix(matrix: list) -> None:
+def print_matrix_with_sums(matrix: list) -> None:
     pass
 
 
@@ -24,4 +24,4 @@ if __name__ == "__main__":
 
     sort_matrix(matrix)
 
-    print_matrix(matrix)
+    print_matrix_with_sums(matrix)
