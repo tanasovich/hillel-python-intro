@@ -18,7 +18,7 @@ def sort_matrix(matrix: list) -> None:
                     matrix[row][j], matrix[row][j + 1] = matrix[row][j + 1], matrix[row][j]
 
 
-def print_matrix_with_sums(matrix: list, column_sums: list) -> None:
+def print_matrix_with_sums(matrix: list) -> None:
     matrix.append(column_sums)
     for i in range(len(matrix)):
         for j in range(len(matrix)-1):
@@ -41,4 +41,4 @@ if __name__ == "__main__":
 
     sort_matrix(matrix)
 
-    print_matrix_with_sums(matrix, column_sums)
+    print_matrix_with_sums(matrix)
