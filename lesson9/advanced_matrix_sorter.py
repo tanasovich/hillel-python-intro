@@ -1,8 +1,21 @@
 from random import randint
 
 
-def sort_matrix(matrix: list, column_sums: list) -> None:
-    pass
+column_sums = list()
+
+
+def sort_matrix(matrix: list) -> None:
+    for column in range(matrix_size):
+        column_sums.append(0)
+        for row in range(matrix_size):
+            column_sums[column] += matrix[row][column]
+
+    for i in range(len(column_sums)-1):
+        for j in range(len(column_sums)-i-1):
+            if column_sums[j] > column_sums[j + 1]:
+                column_sums[j], column_sums[j + 1] = column_sums[j + 1], column_sums[j]
+                for row in range(len(matrix)):
+                    matrix[row][j], matrix[row][j + 1] = matrix[row][j + 1], matrix[row][j]
 
 
 def print_matrix_with_sums(matrix: list, column_sums: list) -> None:
@@ -26,11 +39,6 @@ if __name__ == "__main__":
 
     matrix: list = [[randint(1, 50) for j in range(matrix_size)] for i in range(matrix_size)]
 
-    column_sums: list = [0 for i in range(matrix_size)]
-    for column in range(matrix_size):
-        for row in range(matrix_size):
-            column_sums[column] += matrix[row][column]
-
-    sort_matrix(matrix, column_sums)
+    sort_matrix(matrix)
 
     print_matrix_with_sums(matrix, column_sums)
