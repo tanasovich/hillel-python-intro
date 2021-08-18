@@ -17,6 +17,16 @@ def sort_matrix(matrix: list) -> None:
                 for row in range(len(matrix)):
                     matrix[row][j], matrix[row][j + 1] = matrix[row][j + 1], matrix[row][j]
 
+    for j in range(len(matrix)):
+        for i in range(len(matrix)-1):
+            for k in range(len(matrix)-i-1):
+                if j % 2 == 0:
+                    if matrix[k][j] < matrix[k + 1][j]:
+                        matrix[k][j], matrix[k + 1][j] = matrix[k + 1][j], matrix[k][j]
+                else:
+                    if matrix[k][j] > matrix[k + 1][j]:
+                        matrix[k][j], matrix[k + 1][j] = matrix[k + 1][j], matrix[k][j]
+
 
 def print_matrix_with_sums(matrix: list) -> None:
     matrix.append(column_sums)
