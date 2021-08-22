@@ -13,4 +13,6 @@ def count_first(nums, n: int) -> list:
 
 
 if __name__ == "__main__":
+    print(count_first(None, 2))
+    print(count_first(None, 5))
     print(count_first(None, 10))
