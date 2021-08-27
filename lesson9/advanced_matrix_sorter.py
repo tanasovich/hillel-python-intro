@@ -5,11 +5,6 @@ column_sums = list()
 
 
 def sort_matrix(matrix: list) -> None:
-    for column in range(matrix_size):
-        column_sums.append(0)
-        for row in range(matrix_size):
-            column_sums[column] += matrix[row][column]
-
     for i in range(len(column_sums)-1):
         for j in range(len(column_sums)-i-1):
             if column_sums[j] > column_sums[j + 1]:
@@ -29,7 +24,6 @@ def sort_matrix(matrix: list) -> None:
 
 
 def print_matrix_with_sums(matrix: list) -> None:
-    matrix.append(column_sums)
     for i in range(len(matrix)):
         for j in range(len(matrix)-1):
             print(f"{matrix[i][j] : > 4}", end='')
@@ -49,6 +43,19 @@ if __name__ == "__main__":
 
     matrix: list = [[randint(1, 50) for j in range(matrix_size)] for i in range(matrix_size)]
 
+    for column in range(matrix_size):
+        column_sums.append(0)
+        for row in range(matrix_size):
+            column_sums[column] += matrix[row][column]
+
+    matrix.append(column_sums)
+    print("До сортировки:")
+    print_matrix_with_sums(matrix)
+    matrix.pop()
+
     sort_matrix(matrix)
 
+    matrix.append(column_sums)
+    print("\nПосле сортировки")
     print_matrix_with_sums(matrix)
+    matrix.pop()
