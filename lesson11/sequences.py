@@ -22,7 +22,7 @@ def reverse_it(n: int) -> int:
         not_yet_reversed = n // 10
         digits_count = int(log10(not_yet_reversed) + 1)
 
-        return digit * 10**digits_count + reverse_it(not_yet_reversed)
+        return digit * 10 ** digits_count + reverse_it(not_yet_reversed)
     else:
         return n
 
@@ -57,6 +57,8 @@ def count_first(nums, n: int) -> list:
     :param n: index of element from the sequence
     :return: nth element
     """
+    del nums  # unused
+
     def a(k: int) -> int:
         if k == 1:
             return 1
