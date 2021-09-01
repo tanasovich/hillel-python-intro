@@ -43,3 +43,4 @@ def print_matrix_with_sums(matrix: list) -> None:
         for j in range(len(matrix)-1):
             print(f"{matrix[i][j] : > 4}", end='')
         print()
+    matrix.pop()
