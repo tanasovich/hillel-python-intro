@@ -6,6 +6,8 @@ sequences. These functions realized in recursive way.
 """
 from math import log10
 
+__all__ = ["reverse_it", "without_00", "count_first"]
+
 
 def reverse_it(n: int) -> int:
     """
