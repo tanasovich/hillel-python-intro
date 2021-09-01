@@ -1,7 +1,19 @@
+"""
+Numeric sequences
+
+Module implements three functions, which produce different numeric
+sequences. These functions realized in recursive way.
+"""
 from math import log10
 
 
 def reverse_it(n: int) -> int:
+    """
+    Accepts integer number (positive) and returns it's reversed
+    variant.
+    :param n: number to be reversed
+    :return: reversed number
+    """
     if n > 10:
         digit = n % 10
         not_yet_reversed = n // 10
@@ -13,6 +25,13 @@ def reverse_it(n: int) -> int:
 
 
 def without_00(a: int, b: int) -> int:
+    """
+    Determines how much sequences with a zeroes and b ones exists
+    without two zeroes subsequences.
+    :param a: zeroes quantity
+    :param b: ones quantity
+    :return: number of combinations
+    """
     if a == 0:
         return 1
     if a == 1:
@@ -24,6 +43,15 @@ def without_00(a: int, b: int) -> int:
 
 
 def count_first(nums, n: int) -> list:
+    """
+    Accepts n and return elements (until nth index) from A002024
+    numeric sequence.
+    A002024 is a such sequence where each ith element appears i times.
+    (see https://oeis.org/A002024)
+    :param nums: numeric list
+    :param n: index of element from the sequence
+    :return: nth element
+    """
     def a(k: int) -> int:
         if k == 1:
             return 1
