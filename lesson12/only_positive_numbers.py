@@ -1,4 +1,9 @@
 class NegativeNumberException(Exception):
+    """
+    Exception, raised when negative numbers used.
+    It has optional message attribute for the
+    convenient problem describing.
+    """
     message = "Trying to use negative numbers! Only positive allowed."
 
     def __init__(self, message=None):
