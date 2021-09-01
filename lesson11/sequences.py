@@ -46,6 +46,7 @@ def without_00(a: int, b: int) -> int:
     return without_00(a - 1, b - 1) + without_00(a, b - 1)
 
 
+# noinspection PyUnusedLocal
 def count_first(nums, n: int) -> list:
     """
     Accepts n and return elements (until nth index) from A002024
@@ -57,7 +58,6 @@ def count_first(nums, n: int) -> list:
     :param n: index of element from the sequence
     :return: nth element
     """
-    del nums  # unused
 
     def a(k: int) -> int:
         if k == 1:
