@@ -1,13 +1,13 @@
-def sum_or_cat(first, second):
+def sum_or_cat():
     """
-    Accepts two values.
+    Accepts two values from the stdin.
     Returns sum of them if both are numbers.
     Returns concatenation if some of them are non-numeric value.
 
-    :param first: first value
-    :param second: second value
     :return: sum or concatenation
     """
+    first, second = input("Please, enter two values: ").split()
+
     try:
         x = float(first)
         y = float(second)
@@ -17,6 +17,4 @@ def sum_or_cat(first, second):
 
 
 if __name__ == "__main__":
-    print(sum_or_cat(2, 2))
-    print(sum_or_cat('string', 2))
-    print(sum_or_cat('string', 'string'))
+    print(sum_or_cat())
