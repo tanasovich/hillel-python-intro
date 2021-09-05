@@ -55,4 +55,3 @@ if __name__ == "__main__":
     file_to_write = open("output.txt", mode="w", encoding="UTF-8")
     write_students_to(students, file_to_write)
     file_to_write.close()
-
