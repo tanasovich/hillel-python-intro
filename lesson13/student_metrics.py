@@ -56,11 +56,11 @@ def print_weak_students_and_score(students: list) -> None:
     for student in students:
         if student['average_grade'] < 5:
             print(formatted_student_credits(student, 24))
-    else:
-        average_grades = [student['average_grade'] for student in students]
-        print("Средний балл по классу: {:.2f}".format(
-            calculate_average_grade(average_grades))
-        )
+
+    average_grades = [student['average_grade'] for student in students]
+    print("Средний балл по классу: {:.2f}".format(
+        calculate_average_grade(average_grades))
+    )
 
 
 def read_students_from(file) -> list:
