@@ -12,4 +12,4 @@ class Counter:
             return self.current
 
     def get_current(self) -> int:
-        pass
+        return self.current
