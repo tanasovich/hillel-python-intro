@@ -5,7 +5,11 @@ class Counter:
         self.stop = stop
 
     def tick(self) -> int:
-        pass
+        if self.current < self.stop:
+            self.current += 1
+            return self.current
+        else:
+            return self.current
 
     def get_current(self) -> int:
         pass
