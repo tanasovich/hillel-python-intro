@@ -1,5 +1,19 @@
+"""
+Exposes Student and Group (of students) classes.
+Student has name, age and grades.
+Group stores students. Can print formatted list of students' names and grades.
+"""
+
+
 class Student:
     def __init__(self, name: str, age: int, grades: list[int]):
+        """
+        Creates student with basic information.
+
+        :param name: name
+        :param age: age
+        :param grades: grades list
+        """
         self.name = name
         self.age = age
         self.grades = grades
@@ -7,9 +21,20 @@ class Student:
 
 class Group:
     def __init__(self, students: list[Student]):
+        """
+        Creates group, populated by students list
+
+        :param students: list of students
+        """
         self.students = students
 
-    def print_students_with_scores(self, desired_width: int = 20):
+    def print_students_with_scores(self, desired_width: int = 20) -> None:
+        """
+        Formatted print of students, stored in group
+
+        :param desired_width: desired width of string per student
+        :return: None
+        """
         for student in self.students:
             grades = ""
 
@@ -23,10 +48,22 @@ class Group:
         print()
 
     def add(self, student: Student) -> None:
+        """
+        Adds student to the group.
+
+        :param student: student to be added
+        :return: None
+        """
         self.students.append(student)
         print(f"Added student {student.name}.", end="\n\n")
 
     def remove(self, student: Student) -> None:
+        """
+        Removes student from the group.
+
+        :param student: student to be removed
+        :return: None
+        """
         self.students.remove(student)
         print(f"Removed student {student.name}.", end="\n\n")
 
