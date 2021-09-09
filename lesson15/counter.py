@@ -13,3 +13,12 @@ class Counter:
 
     def get_current(self) -> int:
         return self.current
+
+
+if __name__ == "__main__":
+    counter = Counter(1, 10)
+
+    print(counter.get_current())
+
+    for i in range(counter.stop + 5):  # Trying to tick higher than stop value
+        print(counter.tick())
