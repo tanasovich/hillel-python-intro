@@ -1,12 +1,26 @@
+"""
+Exposes Buffer class.
+Buffer can add numeric sequence and get sum of each five elements.
+"""
 from random import randint
 
 
 class Buffer:
     def __init__(self):
+        """
+        Creates Buffer object.
+        """
         self.elements: list = list()
         self.sum_of_five_elements: int = 0
 
     def add(self, *a) -> None:
+        """
+        Adds numeric sequence to buffer. Prints sum of each five elements and
+        remove them from the buffer.
+
+        :param a: elements to be added to internal buffer
+        :return: None
+        """
         for number in a:
             self.elements.append(number)
 
@@ -18,6 +32,11 @@ class Buffer:
                 self.sum_of_five_elements = 0
 
     def get_current_part(self) -> list:
+        """
+        Gets current elements in buffer.
+
+        :return: list of elements
+        """
         return self.elements
 
 
