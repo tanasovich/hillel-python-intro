@@ -3,7 +3,7 @@ class Buffer:
         self.elements: list = list()
         self.sum_of_five_elements: int = 0
 
-    def add(self, *a):
+    def add(self, *a) -> None:
         for number in a:
             self.elements.append(number)
 
@@ -14,5 +14,5 @@ class Buffer:
                 print(f"Sum of five elements: {self.sum_of_five_elements}")
                 self.sum_of_five_elements = 0
 
-    def get_current_part(self):
-        pass
+    def get_current_part(self) -> list:
+        return self.elements
