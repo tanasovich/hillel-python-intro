@@ -1,6 +1,7 @@
 class Buffer:
     def __init__(self):
-        pass
+        self.elements: list = list()
+        self.sum_of_five_elements: int = 0
 
     def add(self, *a):
         pass
